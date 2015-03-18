@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>TestTask</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        @font-face {
+            font-family: Kontur-lconic-eco;
+            src: url(./Kontur-lconic-eco.ttf);
+        }
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <div class="leftColumn">
+        <div id="buttonMultiplyMatrix">
+            <div id="descriptionMultiplyMatrix">Умножить матрицы</div>
+        </div>
+        <a class="greyButton" href="#">
+            <span class="alineByCenter"><span class="konturSymbol"></span> Очистить матрицы</span>
+        </a>
+        <a class="greyButton" id="buttonChangeMatrix" href="#">
+            <span class="alineByCenter"><span class="konturSymbol"></span> Поменять матрицы местами</span>
+        </a>
+
+        <div id="radioBox">
+            <div id="radioMatrix_A"><label><input type="radio" name="matrix">Матрица A</label></div>
+            <div id="radioMatrix_B"><label><input type="radio" checked="" name="matrix">Матрица B</label></div>
+        </div>
+        <div id="rowBox">
+            <a class="rowItem greyButton" href="#"><span class="alineByCenter"><span class="konturSymbol"></span> Добавить</span></a>
+            <a class="rowItem greyButton" href="#"><span class="alineByCenter"><span class="konturSymbol"></span> Удалить</span></a>
+            строку
+        </div>
+        <div id="columnBox">
+            <a class="columnItem greyButton" href="#"><span class="alineByCenter"><span class="konturSymbol"></span> Добавить</span></a>
+            <a class="columnItem greyButton" href="#"><span class="alineByCenter"><span class="konturSymbol"></span> Удалить</span></a>
+            столбец
+        </div>
+    </div>
+    <div class="rightColumn">
+        <div style="display: table-row">
+            <div class="C" style="display: table-cell">
+                <table id="resultC">
+                    <tr>
+                        <td><input type="text" value="c1,1"></td>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="A" style="display: table-cell">
+                <table>
+                    <tr>
+                        <td><input type="text" value="a1,1"></td>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                    </tr>
+                </table>
+            </div>
+            <h2 style="display: table-cell; vertical-align: middle; width: 100px;">A</h2>
+        </div>
+        <div style="display: inline-block">
+            <div class="B">
+                <table>
+                    <tr>
+                        <td><input type="text" value="b1,1"></td>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                    </tr>
+                </table>
+            </div>
+            <h2 style="text-align: center; margin-top: 5px">B</h2>
+        </div>
+    </div>
+    <!--<p>
+        <span>:before</span>
+        blah blah blah
+        <span>:after</span>
+    </p>-->
+</div>
+</body>
+</html>
