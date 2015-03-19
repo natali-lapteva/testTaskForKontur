@@ -5,90 +5,116 @@
     <title>TestTask</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" type="text/css" href="styleButton.css">
-    <style>
-        @font-face {
-            font-family: Kontur-lconic-eco;
-            src: url(./Kontur-lconic-eco.ttf);
-        }
-    </style>
+    <script src="jquery-2.1.3.min.js"></script>
+    <script src="calculate.js"></script>
 </head>
-<body>
+<body onload="onReady()">
 <div class="wrapper">
-    <div class="leftPart">
-        <a class="buttonMultiplyMatrix" href="#">
+    <div class="leftPart" id="leftPart">
+        <a class="buttonMultiplyMatrix" href="#" id="multiplyMatrix">
             <span id="descriptionMultiplyMatrix">Умножить матрицы</span>
         </a>
-        <a class="greyButton" href="#">
+        <a class="greyButton" href="#" id="clearAll">
             <span class="alineByCenter"><span class="konturSymbol"></span> Очистить матрицы</span>
         </a>
-        <a class="greyButton" id="buttonChangeMatrix" href="#">
+        <a class="greyButton" id="buttonChangeMatrix" href="#" style="border: 1px solid #d9d9d9; background: #f2f2f2; color: #929292;">
             <span class="alineByCenter"><span class="konturSymbol"></span> Поменять матрицы местами</span>
         </a>
 
         <div id="radioBox">
-            <div id="radioMatrix_A"><label><input type="radio" name="matrix">Матрица A</label></div>
-            <div id="radioMatrix_B"><label><input type="radio" checked="" name="matrix">Матрица B</label></div>
+            <div id="radioMatrix_A"><label><input type="radio" name="matrix" value="a">Матрица A</label></div>
+            <div id="radioMatrix_B"><label><input type="radio" checked="" name="matrix" value="b">Матрица B</label></div>
         </div>
         <div id="rowBox">
-            <a class="rowItem greyButton" href="#"><span class="alineByCenter"><span class="konturSymbol"></span> Добавить</span></a>
-            <a class="rowItem greyButton" href="#"><span class="alineByCenter"><span class="konturSymbol"></span> Удалить</span></a>
+            <a class="rowItem greyButton" href="#" id="addRow"><span class="alineByCenter"><span class="konturSymbol"></span> Добавить</span></a>
+            <a class="rowItem greyButton" href="#" id="removeRow"><span class="alineByCenter"><span class="konturSymbol"></span> Удалить</span></a>
             строку
         </div>
         <div id="columnBox">
-            <a class="columnItem greyButton" href="#"><span class="alineByCenter"><span class="konturSymbol"></span> Добавить</span></a>
-            <a class="columnItem greyButton" href="#"><span class="alineByCenter"><span class="konturSymbol"></span> Удалить</span></a>
+            <a class="columnItem greyButton" href="#" id="addColumn"><span class="alineByCenter"><span class="konturSymbol"></span> Добавить</span></a>
+            <a class="columnItem greyButton" href="#" id="removeColumn"><span class="alineByCenter"><span class="konturSymbol"></span> Удалить</span></a>
             столбец
         </div>
+        <div id="errorMsg">Такие матрицы нельзя перемножить, так как количество столбцов матриы А не равно количеству строк матрицы В.</div>
     </div>
     <div class="rightPart">
-        <div style="display: table-row">
-            <div class="C" style="display: table-cell">
-                <table id="resultC">
-                    <tr>
-                        <td><input type="text" value="c1,1"></td>
-                        <td><input type="text"></td>
-                    </tr>
-                    <tr>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                    </tr>
-                </table>
+        <div class="resultBox" style="margin-left: 40px">
+            <div class="matrixWrapper">
+                <div class="rightBracket">&nbsp</div>
+                <div class="matrixC">
+                    <table id="c" cellspacing="0">
+                        <tr>
+                            <td><input type="text" class="cell" disabled id="c_0_0"></td>
+                            <td><input type="text" class="cell" disabled id="c_0_1"></td>
+                            <td><input type="text" class="cell" disabled id="c_0_2"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" class="cell" disabled id="c_1_0"></td>
+                            <td><input type="text" class="cell" disabled id="c_1_1"></td>
+                            <td><input type="text" class="cell" disabled id="c_1_2"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" class="cell" disabled id="c_2_0"></td>
+                            <td><input type="text" class="cell" disabled id="c_2_1"></td>
+                            <td><input type="text" class="cell" disabled id="c_2_2"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" class="cell" disabled id="c_3_0"></td>
+                            <td><input type="text" class="cell" disabled id="c_3_1"></td>
+                            <td><input type="text" class="cell" disabled id="c_3_2"></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="leftBracket">&nbsp</div>
             </div>
-            <div class="A" style="display: table-cell">
-                <table>
-                    <tr>
-                        <td><input type="text" value="a1,1"></td>
-                        <td><input type="text"></td>
-                    </tr>
-                    <tr>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                    </tr>
-                </table>
+            <div class="matrixWrapper">
+                <div class="rightBracket">&nbsp</div>
+                <div class="matrixA">
+                    <table cellspacing="0" id="a">
+                        <tr>
+                            <td><input type="text" class="cell" id="a_0_0"></td>
+                            <td><input type="text" class="cell" id="a_0_1"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" class="cell" id="a_1_0"></td>
+                            <td><input type="text" class="cell" id="a_1_1"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" class="cell" id="a_2_0"></td>
+                            <td><input type="text" class="cell" id="a_2_1"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" class="cell" id="a_3_0"></td>
+                            <td><input type="text" class="cell" id="a_3_1"></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="leftBracket">&nbsp</div>
+                <span class="titleA">A</span>
             </div>
-            <h2 style="display: table-cell; vertical-align: middle; width: 100px;">A</h2>
         </div>
-        <div style="display: inline-block">
-            <div class="B">
-                <table>
-                    <tr>
-                        <td><input type="text" value="b1,1"></td>
-                        <td><input type="text"></td>
-                    </tr>
-                    <tr>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                    </tr>
-                </table>
+        <div class="dataBox">
+            <div class="matrixWrapper">
+                <div class="rightBracket">&nbsp</div>
+                <div class="matrixB">
+                    <table cellspacing="0" id="b">
+                        <tr>
+                            <td><input type="text" class="cell" id="b_0_0"></td>
+                            <td><input type="text" class="cell" id="b_0_1"></td>
+                            <td><input type="text" class="cell" id="b_0_2"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" class="cell" id="b_1_0"></td>
+                            <td><input type="text" class="cell" id="b_1_1"></td>
+                            <td><input type="text" class="cell" id="b_1_2"></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="leftBracket">&nbsp</div>
+                <span class="titleB">B</span>
             </div>
-            <h2 style="text-align: center; margin-top: 5px">B</h2>
         </div>
     </div>
-    <!--<p>
-        <span>:before</span>
-        blah blah blah
-        <span>:after</span>
-    </p>-->
 </div>
 </body>
 </html>

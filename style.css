@@ -1,3 +1,8 @@
+@font-face {
+    font-family: Kontur-lconic-eco;
+    src: url(./Kontur-lconic-eco.ttf);
+}
+
 body {
     margin: 0 auto;
     font: 14px "Segoe UI", sans-serif;
@@ -22,8 +27,8 @@ body {
     background: #ffffff;
     /*border: solid black;*/
     height: 100%;
-    /*float: right;*/
-    width: 1013px;
+    padding-left: 20px;
+    padding-top: 15px;
 }
 
 a.buttonMultiplyMatrix {
@@ -94,19 +99,24 @@ a.greyButton {
     height: 28px;
 }
 
-
 .konturSymbol {
     font-family: "Kontur-lconic-eco", serif;
 }
 
-td input {
-    border: 1px solid rgba(9, 9, 9, 0.2);
+input[type = text] {
     width: 38px;
     height: 38px;
-    margin-left: 10px;
-    padding: 0;
-    background: #f2f2f2;
     color: #dadada;
+    border: 1px solid #d9d9d9;
+    border-top-color: #b2b2b2;
+    box-shadow: inset 0 1px #f2f2f2;
+}
+
+.matrixC input[type = text] {
+    background: #f2f2f2;
+    width: 38px;
+    height: 38px;
+    border: 1px solid rgba(9, 9, 9, 0.2);
 }
 
 .rowItem:last-child {
@@ -122,3 +132,80 @@ td input {
     vertical-align: middle;
     display: inline-block;
 }
+
+.matrixC, .matrixA, .matrixB {
+    display: table-cell;
+}
+
+.titleA {
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 20px;
+    padding-left: 20px;
+}
+
+.titleB {
+    text-align: center;
+    margin-top: 5px;
+    font-size: 20px;
+    display: block;
+}
+
+.resultBox {
+    display: table-row;
+}
+
+.dataBox {
+    display: inline-block;
+}
+
+.rightBracket {
+    border-left: 2px solid #404040;
+    border-top: 2px solid #404040;
+    border-bottom: 2px solid #404040;
+    display: table-cell;
+    margin-left: 40px;
+    width: 8px;
+}
+
+.leftBracket {
+    border-right: 2px solid #404040;
+    border-top: 2px solid #404040;
+    border-bottom: 2px solid #404040;
+    display: table-cell;
+    margin-left: 40px;
+    width: 8px;
+}
+
+.cell {
+    margin: 5px;
+}
+
+td:last-child .cell {
+    margin-right: 0;
+}
+
+td:first-child .cell {
+    margin-left: 0;
+}
+
+tr:first-child .cell {
+    margin-top: 8px;
+
+}
+
+tr:last-child .cell {
+    margin-bottom: 8px;
+}
+
+.matrixWrapper {
+    display: inline-block;
+    margin: 0 20px 40px;
+}
+
+#errorMsg {
+    color: red;
+    display: none;
+    margin: 20px;
+}
+
