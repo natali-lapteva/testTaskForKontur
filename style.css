@@ -106,10 +106,11 @@ a.greyButton {
 input[type = text] {
     width: 38px;
     height: 38px;
-    color: #dadada;
     border: 1px solid #d9d9d9;
     border-top-color: #b2b2b2;
     box-shadow: inset 0 1px #f2f2f2;
+    padding-left: 7px;
+    box-sizing: border-box;
 }
 
 .matrixC input[type = text] {
@@ -204,7 +205,7 @@ tr:last-child .cell {
 }
 
 #errorMsg {
-    color: red;
+    color: #ff0000;
     display: none;
     margin: 20px;
 }

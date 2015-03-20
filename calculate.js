@@ -1,5 +1,5 @@
 function onReady() {
-    var dimensions = {
+    var dimensions = {  //размерности матриц
         a: {
             rows: 4,
             columns: 2
@@ -98,6 +98,7 @@ function onReady() {
         if (dimensions['a'].columns !== dimensions['b'].rows) {
             $('#leftPart').css('background', '#f6c1c0');
             $('#errorMsg').css('display', 'block');
+            return;
         } else {
             $('#leftPart').css('background', '#bcbcbc');
             $('#errorMsg').css('display', 'none');
