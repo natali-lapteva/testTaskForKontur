@@ -21,15 +21,20 @@ function onReady() {
         var row = $('<tr/>');
         for (var i = 0; i < dimensions[matrixName].columns; i++) {
             var cell = $('<td/>');
-            $('<input>', {
+            var settings = {
                 type: 'text',
                 class: 'cell',
                 id: matrixName + '_' + dimensions[matrixName].rows + '_' + i
-            }).appendTo(cell);
+            };
+            if (matrixName === 'c') {
+                settings['disabled'] = 'disabled';
+            }
+            $('<input>', settings).appendTo(cell);
             cell.appendTo(row);
         }
         row.appendTo($('#' + matrixName));
         dimensions[matrixName].rows++;
+        setMask();
     }
 
     function removeRow(matrixName) {
@@ -48,14 +53,19 @@ function onReady() {
         var rows = $('tr', '#' + matrixName);
         for (var i = 0; i < rows.length; i++) {
             var cell = $('<td/>');
-            $('<input>', {
+            var settings = {
                 type: 'text',
                 class: 'cell',
                 id: matrixName + '_' + i + '_' + dimensions[matrixName].columns
-            }).appendTo(cell);
+            };
+            if (matrixName === 'c') {
+                settings['disabled'] = 'disabled';
+            }
+            $('<input>', settings).appendTo(cell);
             cell.appendTo(rows[i]);
         }
         dimensions[matrixName].columns++;
+        setMask();
     }
 
     function removeColumn(matrixName) {

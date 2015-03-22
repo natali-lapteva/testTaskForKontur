@@ -210,3 +210,7 @@ tr:last-child .cell {
     margin: 20px;
 }
 
+.placeholder {
+    color: #e0e0e0;
+}
+
