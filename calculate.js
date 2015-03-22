@@ -139,5 +139,8 @@ function onReady() {
             }
         }
     });
-
+    $('.deleteError').click(function () {
+        $('#errorMsg').css('display', 'none');
+        $('#leftPart').css('background', '#bcbcbc');
+    })
 }

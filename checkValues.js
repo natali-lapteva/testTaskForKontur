@@ -22,6 +22,7 @@ function setMask () {
                 input.addClass('placeholder');
             }, 0);
         }
+        $('#leftPart').css('background', '#bcbcbc');
     });
     inputs.focus (function(e) {
         var input = $(e.target);
@@ -29,6 +30,7 @@ function setMask () {
             input.val('');
             input.removeClass('placeholder');
         }
+        $('#leftPart').css('background', '#5199db');
     });
     inputs.mask('9?9', {placeholder:''});
     for (var i = 0; i < inputs.length; i++) {
