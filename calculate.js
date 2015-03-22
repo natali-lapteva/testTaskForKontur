@@ -38,7 +38,7 @@ function onReady() {
     }
 
     function removeRow(matrixName) {
-        if (dimensions[matrixName].rows <= 1) {
+        if (dimensions[matrixName].rows <= 2) {
             return;
         }
         var rows = $('tr', '#' + matrixName);
@@ -69,7 +69,7 @@ function onReady() {
     }
 
     function removeColumn(matrixName) {
-        if (dimensions[matrixName].columns <= 1) {
+        if (dimensions[matrixName].columns <= 2) {
             return;
         }
         var rows = $('tr', '#' + matrixName);
