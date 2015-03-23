@@ -1,5 +1,10 @@
 @font-face {
     font-family: Kontur-lconic-eco;
+    src: url('Kontur-lconic-eco.eot');
+}
+
+@font-face {
+    font-family: Kontur-lconic-eco;
     src: url(./Kontur-lconic-eco.ttf);
 }
 
@@ -25,7 +30,6 @@ body {
 .rightPart {
     margin-left: 330px;
     background: #ffffff;
-    /*border: solid black;*/
     height: 100%;
     padding-left: 20px;
     padding-top: 15px;
