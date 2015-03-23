@@ -38,8 +38,8 @@ body {
 span#descriptionMultiplyMatrix {
     text-align: center;
     position: absolute;
-    top: 7px;
-    left: 19px;
+    left: 24px;
+    line-height: 36px;
 }
 
 a.greyButton {
@@ -115,7 +115,7 @@ input[type = text] {
 }
 
 .alineByCenter {
-    margin: 0 7px;
+    margin: 0 6px;
     vertical-align: middle;
     display: inline-block;
 }
