@@ -35,6 +35,16 @@ body {
     padding-top: 15px;
 }
 
+a.buttonMultiplyMatrix {
+    margin: 32px 0 55px 30px;
+    display: block;
+    height: 38px;
+    width: 177px;
+    color: #ffffff;
+    border-radius: 2px;
+    position: relative;
+}
+
 span#descriptionMultiplyMatrix {
     text-align: center;
     position: absolute;
@@ -106,6 +116,10 @@ input[type = text] {
     border: 1px solid rgba(9, 9, 9, 0.2);
 }
 
+td {
+    padding: 0;
+}
+
 .rowItem:last-child {
     margin-left: 10px;
 }
@@ -138,15 +152,6 @@ input[type = text] {
     display: block;
 }
 
-.resultBox {
-    display: table-row;
-    margin-left: 40px;
-}
-
-.dataBox {
-    display: inline-block;
-}
-
 .rightBracket {
     border-left: 2px solid #404040;
     border-top: 2px solid #404040;
@@ -169,17 +174,16 @@ input[type = text] {
     margin: 5px;
 }
 
-td:last-child .cell {
+.matrixImpl td:last-child .cell {
     margin-right: 0;
 }
 
-td:first-child .cell {
+.matrixImpl td:first-child .cell {
     margin-left: 0;
 }
 
-tr:first-child .cell {
+.matrixImpl tr:first-child .cell {
     margin-top: 8px;
-
 }
 
 tr:last-child .cell {
@@ -201,12 +205,3 @@ tr:last-child .cell {
     color: #e0e0e0;
 }
 
-a.buttonMultiplyMatrix {
-    margin: 32px 0 55px 30px;
-    display: block;
-    height: 38px;
-    width: 177px;
-    color: #ffffff;
-    border-radius: 2px;
-    position: relative;
-}
