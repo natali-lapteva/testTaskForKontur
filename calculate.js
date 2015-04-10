@@ -83,20 +83,32 @@ function onReady() {
     $('#addRow').click(function () {
         var matrixName = $('input[name=matrix]:checked', '#radioBox').val();
         addRow(matrixName);
+        if (matrixName === 'a') {
+            addRow('c');
+        }
     });
 
     $('#removeRow').click(function () {
         var matrixName = $('input[name=matrix]:checked', '#radioBox').val();
         removeRow(matrixName);
+        if (matrixName === 'a') {
+            removeRow('c');
+        }
     });
     $('#addColumn').click(function () {
         var matrixName = $('input[name=matrix]:checked', '#radioBox').val();
         addColumn(matrixName);
+        if (matrixName === 'b') {
+            addColumn('c');
+        }
     });
 
     $('#removeColumn').click(function () {
         var matrixName = $('input[name=matrix]:checked', '#radioBox').val();
         removeColumn(matrixName);
+        if (matrixName === 'b') {
+            removeColumn('c');
+        }
     });
     $('#clearAll').click(function () {
         var cells = $('.cell');
@@ -112,19 +124,6 @@ function onReady() {
         } else {
             $('#leftPart').css('background', '#bcbcbc');
             $('#errorMsg').css('display', 'none');
-        }
-
-        while (dimensions['c'].rows < dimensions['a'].rows) {
-            addRow('c');
-        }
-        while (dimensions['c'].rows > dimensions['a'].rows) {
-            removeRow('c');
-        }
-        while (dimensions['c'].columns < dimensions['b'].columns) {
-            addColumn('c');
-        }
-        while (dimensions['c'].columns > dimensions['b'].columns) {
-            removeColumn('c');
         }
 
         for (var i = 0; i < dimensions['a'].rows; i++) {
