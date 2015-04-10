@@ -33,6 +33,10 @@ function setMask () {
         $('#leftPart').css('background', '#5199db');
     });
     inputs.mask('9?9', {placeholder:''});
+    setPlaceholders(inputs);
+}
+
+function setPlaceholders(inputs) {
     for (var i = 0; i < inputs.length; i++) {
         var input = $(inputs[i]);
         input.val(getPlaceholder(input));

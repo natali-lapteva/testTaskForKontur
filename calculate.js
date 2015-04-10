@@ -115,6 +115,7 @@ function onReady() {
         for (var i = 0; i < cells.length; i++) {
             $(cells[i]).val('');
         }
+        setPlaceholders(cells);
     });
     $('#multiplyMatrix').click(function () {
         if (dimensions['a'].columns !== dimensions['b'].rows) {
@@ -130,8 +131,8 @@ function onReady() {
             for (var j = 0; j < dimensions['b'].columns; j++) {
                 var sum = 0;
                 for (var k = 0; k < dimensions['b'].rows; k++) {
-                    var a_i_k = parseInt($('#a_' + i + '_' + k).val(), 10);
-                    var b_k_j = parseInt($('#b_' + k + '_' + j).val(), 10);
+                    var a_i_k = parseInt($('#a_' + i + '_' + k).val(), 10) || 0;
+                    var b_k_j = parseInt($('#b_' + k + '_' + j).val(), 10) || 0;
                     sum += a_i_k * b_k_j;
                 }
                 $('#c_' + i + '_' + j).val(sum);
