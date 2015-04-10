@@ -142,14 +142,28 @@ td {
     display: table-cell;
     vertical-align: middle;
     font-size: 20px;
+}
+
+.leftSide {
+    padding-right: 20px;
+}
+
+.rightSide {
     padding-left: 20px;
 }
 
 .titleB {
     text-align: center;
-    margin-top: 5px;
     font-size: 20px;
     display: block;
+}
+
+.topSide {
+    margin-bottom: 5px;
+}
+
+.bottomSide {
+    margin-top: 5px;
 }
 
 .rightBracket {
