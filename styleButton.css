@@ -1,0 +1,90 @@
+/*кнопка "Умножить матрицы"*/
+a.buttonMultiplyMatrix {
+    /*состояние покой*/
+    /*цвет рамки*/
+    border: 1px solid rgba(74, 128, 60, 0.6);
+    border-bottom-color: rgba(55, 102, 43, 0.6);
+    /*градиент фона*/
+    background: rgb(75, 169, 29);
+    background: -moz-linear-gradient(top, rgba(75, 169, 29, 1) 0%, rgba(56, 146, 12, 1) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(75, 169, 29, 1)), color-stop(100%, rgba(56, 146, 12, 1)));
+    background: -webkit-linear-gradient(top, rgba(75, 169, 29, 1) 0%, rgba(56, 146, 12, 1) 100%);
+    background: -o-linear-gradient(top, rgba(75, 169, 29, 1) 0%, rgba(56, 146, 12, 1) 100%);
+    background: -ms-linear-gradient(top, rgba(75, 169, 29, 1) 0%, rgba(56, 146, 12, 1) 100%);
+    background: linear-gradient(to bottom, rgba(75, 169, 29, 1) 0%, rgba(56, 146, 12, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4ba91d', endColorstr='#38920c', GradientType=0);
+}
+
+a.buttonMultiplyMatrix:hover {
+    /*состояние при наведении*/
+    /*цет рамки*/
+    border: 1px solid rgba(66, 148, 1, 0.6);
+    border-bottom-color: rgba(56, 126, 1, 0.6);
+    /*тень*/
+    /*box-shadow: 0 1px #f2f2f2;*/
+    /*градиент фона*/
+    background: rgb(74, 166, 0);
+    background: -moz-linear-gradient(top, rgba(74, 166, 0, 1) 0%, rgba(66, 150, 0, 1) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(74, 166, 0, 1)), color-stop(100%, rgba(66, 150, 0, 1)));
+    background: -webkit-linear-gradient(top, rgba(74, 166, 0, 1) 0%, rgba(66, 150, 0, 1) 100%);
+    background: -o-linear-gradient(top, rgba(74, 166, 0, 1) 0%, rgba(66, 150, 0, 1) 100%);
+    background: -ms-linear-gradient(top, rgba(74, 166, 0, 1) 0%, rgba(66, 150, 0, 1) 100%);
+    background: linear-gradient(to bottom, rgba(74, 166, 0, 1) 0%, rgba(66, 150, 0, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4aa600', endColorstr='#429600', GradientType=0);
+}
+
+a.buttonMultiplyMatrix:active {
+    /*состояние нажатая*/
+    /*цет рамки*/
+    border: 1px solid rgba(51, 113, 1, 1);
+    border-top-color: rgba(46, 101, 1, 1);
+    border-bottom-color: rgba(55, 122, 1, 0.6);
+    /*фон*/
+    background: #429500;
+    box-shadow: inset 0 2px 2px #3b8600;
+}
+
+/*Командные кнопки*/
+a.greyButton {
+    /*состояние покой*/
+    /*цет рамки*/
+    border: 1px solid rgba(217, 217, 217, 0.5);
+    border-bottom-color: rgba(178, 178, 178, 0.5);
+    /*градиент фона*/
+    background: rgb(254, 254, 254);
+    background: -moz-linear-gradient(top, rgba(254, 254, 254, 1) 0%, rgba(236, 236, 236, 1) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(254, 254, 254, 1)), color-stop(100%, rgba(236, 236, 236, 1)));
+    background: -webkit-linear-gradient(top, rgba(254, 254, 254, 1) 0%, rgba(236, 236, 236, 1) 100%);
+    background: -o-linear-gradient(top, rgba(254, 254, 254, 1) 0%, rgba(236, 236, 236, 1) 100%);
+    background: -ms-linear-gradient(top, rgba(254, 254, 254, 1) 0%, rgba(236, 236, 236, 1) 100%);
+    background: linear-gradient(to bottom, rgba(254, 254, 254, 1) 0%, rgba(236, 236, 236, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fefefe', endColorstr='#ececec', GradientType=0);
+}
+
+a.greyButton:hover {
+    /*состояние при наведении*/
+    /*цвет рамки*/
+    border: 1px solid rgba(217, 217, 217, 0.5);
+    border-bottom-color: rgba(178, 178, 178, 0.5);
+    /*градиент фона*/
+    background: rgb(242, 242, 242);
+    background: -moz-linear-gradient(top, rgba(242, 242, 242, 1) 0%, rgba(223, 223, 223, 1) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(242, 242, 242, 1)), color-stop(100%, rgba(223, 223, 223, 1)));
+    background: -webkit-linear-gradient(top, rgba(242, 242, 242, 1) 0%, rgba(223, 223, 223, 1) 100%);
+    background: -o-linear-gradient(top, rgba(242, 242, 242, 1) 0%, rgba(223, 223, 223, 1) 100%);
+    background: -ms-linear-gradient(top, rgba(242, 242, 242, 1) 0%, rgba(223, 223, 223, 1) 100%);
+    background: linear-gradient(to bottom, rgba(242, 242, 242, 1) 0%, rgba(223, 223, 223, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f2f2f2', endColorstr='#dfdfdf', GradientType=0);
+}
+
+a.greyButton:active {
+    /*состояние нажатая*/
+    /*цет рамки*/
+    border: 1px solid rgba(204, 204, 204, 0.5);
+    border-top-color: rgba(166, 166, 166, 0.5);
+    /*градиент фона*/
+    background: #d9d9d9;
+    box-shadow: inset 0 2px 2px #c1c1c1;
+}
+
+
