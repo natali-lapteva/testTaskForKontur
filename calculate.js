@@ -23,7 +23,7 @@ function onReady() {
             var cell = $('<td/>');
             var settings = {
                 type: 'text',
-                class: 'cell',
+                'class': 'cell',
                 id: matrixName + '_' + dimensions[matrixName].rows + '_' + i
             };
             if (matrixName === 'c') {
@@ -55,7 +55,7 @@ function onReady() {
             var cell = $('<td/>');
             var settings = {
                 type: 'text',
-                class: 'cell',
+                'class': 'cell',
                 id: matrixName + '_' + i + '_' + dimensions[matrixName].columns
             };
             if (matrixName === 'c') {
