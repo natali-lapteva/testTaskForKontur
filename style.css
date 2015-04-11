@@ -38,12 +38,63 @@ body {
 a.buttonMultiplyMatrix {
     margin: 32px 0 55px 30px;
     display: block;
-    height: 38px;
+    height: 37px;
     width: 177px;
     color: #ffffff;
     border-radius: 2px;
     position: relative;
 }
+
+a.buttonMultiplyMatrix::after {
+    mask: url('data:image/svg+xml;utf8,<svg id="logo_mask_right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 70"><path fill="#231F20" d="M24.6 34.19L4.38 2.42C3.68.91 2.27 0 .61 0H0v70h.68c1.63 0 3.01-.87 3.73-2.34l20.15-29.83c.57-1.19.59-2.44.04-3.64z"/></svg>');
+    -webkit-mask-image: url('data:image/svg+xml;utf8,<svg id="logo_mask_right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 70"><path fill="#231F20" d="M24.6 34.19L4.38 2.42C3.68.91 2.27 0 .61 0H0v70h.68c1.63 0 3.01-.87 3.73-2.34l20.15-29.83c.57-1.19.59-2.44.04-3.64z"/></svg>');
+    width: 14px;
+    right: -13px;
+    content: '';
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    height: 39px;
+    position: absolute;
+    top: -1px;
+}
+
+/*
+a.buttonMultiplyMatrix::after,  a.buttonMultiplyMatrix::before{
+    content: '';
+    background: #333;
+    -moz-border-radius: 0.25em;
+    -webkit-border-radius: 0.25em;
+    border-radius: 0.25em;
+    display: block;
+    height: 0.5em;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 1em;
+}
+
+a.buttonMultiplyMatrix::before {
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+a.buttonMultiplyMatrix::after {
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+a.buttonMultiplyMatrix::before {
+    margin-top: -.36em
+}
+*/
 
 span#descriptionMultiplyMatrix {
     text-align: center;

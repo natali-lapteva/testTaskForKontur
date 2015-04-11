@@ -1,9 +1,6 @@
 /*кнопка "Умножить матрицы"*/
-a.buttonMultiplyMatrix {
+a.buttonMultiplyMatrix, a.buttonMultiplyMatrix::after  {
     /*состояние покой*/
-    /*цвет рамки*/
-    border: 1px solid rgba(74, 128, 60, 0.6);
-    border-bottom-color: rgba(55, 102, 43, 0.6);
     /*градиент фона*/
     background: rgb(75, 169, 29);
     background: -moz-linear-gradient(top, rgba(75, 169, 29, 1) 0%, rgba(56, 146, 12, 1) 100%);
@@ -15,11 +12,15 @@ a.buttonMultiplyMatrix {
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4ba91d', endColorstr='#38920c', GradientType=0);
 }
 
-a.buttonMultiplyMatrix:hover {
+a.buttonMultiplyMatrix {
+    /*состояние покой*/
+    /*цвет рамки*/
+    border: 1px solid rgba(74, 128, 60, 0.6);
+    border-bottom-color: rgba(55, 102, 43, 0.6);
+}
+
+a.buttonMultiplyMatrix:hover, a.buttonMultiplyMatrix:hover::after  {
     /*состояние при наведении*/
-    /*цет рамки*/
-    border: 1px solid rgba(66, 148, 1, 0.6);
-    border-bottom-color: rgba(56, 126, 1, 0.6);
     /*тень*/
     /*box-shadow: 0 1px #f2f2f2;*/
     /*градиент фона*/
@@ -33,16 +34,27 @@ a.buttonMultiplyMatrix:hover {
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4aa600', endColorstr='#429600', GradientType=0);
 }
 
-a.buttonMultiplyMatrix:active {
-    /*состояние нажатая*/
+a.buttonMultiplyMatrix:hover {
+    /*состояние при наведении*/
     /*цет рамки*/
-    border: 1px solid rgba(51, 113, 1, 1);
-    border-top-color: rgba(46, 101, 1, 1);
-    border-bottom-color: rgba(55, 122, 1, 0.6);
-    /*фон*/
-    background: #429500;
-    box-shadow: inset 0 2px 2px #3b8600;
+    border: 1px solid rgba(66, 148, 1, 0.6);
+    border-bottom-color: rgba(56, 126, 1, 0.6);
 }
+
+/*a.buttonMultiplyMatrix:active, a.buttonMultiplyMatrix:active::after {*/
+    /*/!*состояние нажатая*!/*/
+    /*/!*фон*!/*/
+    /*/!*background: #429500;*!/*/
+/*}*/
+
+/*a.buttonMultiplyMatrix:active {*/
+    /*/!*состояние нажатая*!/*/
+    /*/!*цет рамки*!/*/
+    /*box-shadow: inset 0 2px 2px #3b8600;*/
+    /*border: 1px solid rgba(51, 113, 1, 1);*/
+    /*border-top-color: rgba(46, 101, 1, 1);*/
+    /*border-bottom-color: rgba(55, 122, 1, 0.6);*/
+/*}*/
 
 /*Командные кнопки*/
 a.greyButton {
