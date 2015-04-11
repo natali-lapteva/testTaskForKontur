@@ -41,8 +41,8 @@ function onReady() {
         if (dimensions[matrixName].rows <= 2) {
             return;
         }
-        var rows = $('tr', '#' + matrixName);
-        rows[rows.length - 1].remove();
+        var row = $('tr:last-child', '#' + matrixName);
+        row.remove();
         dimensions[matrixName].rows--;
     }
 
@@ -74,8 +74,8 @@ function onReady() {
         }
         var rows = $('tr', '#' + matrixName);
         for (var i = 0; i < rows.length; i++) {
-            var cells = $('td', rows[i]);
-            cells[cells.length - 1].remove();
+            var cell = $('td:last-child', rows[i]);
+            cell.remove();
         }
         dimensions[matrixName].columns--;
     }
