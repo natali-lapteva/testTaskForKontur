@@ -1,6 +1,13 @@
 /*кнопка "Умножить матрицы"*/
-a.buttonMultiplyMatrix, a.buttonMultiplyMatrix::after  {
+a.buttonMultiplyMatrix {
     /*состояние покой*/
+    /*цвет рамки*/
+    border: 1px solid rgba(74, 128, 60, 0.6);
+    border: 1px solid #4A803C \9; /*for IE8 and below*/
+    border-bottom-color: rgba(55, 102, 43, 0.6);
+    border-bottom-color: #37662B \9; /*for IE8 and below*/
+    background: #4BA91D;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4ba91d', endColorstr='#38920c', GradientType=0);
     /*градиент фона*/
     background: -moz-linear-gradient(top, rgba(75, 169, 29, 1) 0%, rgba(56, 146, 12, 1) 100%);
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(75, 169, 29, 1)), color-stop(100%, rgba(56, 146, 12, 1)));
@@ -10,23 +17,65 @@ a.buttonMultiplyMatrix, a.buttonMultiplyMatrix::after  {
     background: linear-gradient(to bottom, rgba(75, 169, 29, 1) 0%, rgba(56, 146, 12, 1) 100%);
 }
 
-a.buttonMultiplyMatrix::after {
+/*Верхняя часть стрелочки*/
+a.buttonMultiplyMatrix:after {
     background: #4BA91D;
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4ba91d', endColorstr='#38920c', GradientType=0);
+    width: 14px;
+    right: -7px;
+    content: '';
+    height: 21px;
+    position: absolute;
+    top: -1px;
+    -ms-transform: skewX(30deg); /* IE 9 */
+    -webkit-transform: skewX(30deg); /* Safari */
+    transform: skewX(30deg);
+    border-top-right-radius: 2px; /* свойство для тех кто его поддерживает */
+    -moz-border-top-right-radius: 2px; /* для firefox */
+    -webkit-border-top-right-radius: 2px; /* для Safari и Chrome */
+    border-bottom-right-radius: 5px; /* свойство для тех кто его поддерживает */
+    -moz-border-bottom-right-radius: 5px; /* для firefox */
+    -webkit-border-bottom-right-radius: 5px; /* для Safari и Chrome */
+    border-right: 1px solid rgba(74, 128, 60, 0.6);
+    border-top: 1px solid rgba(74, 128, 60, 0.6);
+    background: -moz-linear-gradient(top, rgba(75, 169, 29, 1) 0%, rgba(65, 157, 20, 1) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(75, 169, 29, 1)), color-stop(100%, rgba(65, 157, 20, 1)));
+    background: -webkit-linear-gradient(top, rgba(75, 169, 29, 1) 0%, rgba(65, 157, 20, 1) 100%);
+    background: -o-linear-gradient(top, rgba(75, 169, 29, 1) 0%, rgba(65, 157, 20, 1) 100%);
+    background: -ms-linear-gradient(top, rgba(75, 169, 29, 1) 0%, rgba(65, 157, 20, 1) 100%);
+    background: linear-gradient(to bottom, rgba(75, 169, 29, 1) 0%, rgba(65, 157, 20, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4ba91d', endColorstr='#419D14', GradientType=0);
 }
 
-a.buttonMultiplyMatrix {
-    /*состояние покой*/
-    /*цвет рамки*/
-    border: 1px solid rgba(74, 128, 60, 0.6);
-    border: 1px solid #4A803C\9; /*for IE8 and below*/
-    border-bottom-color: rgba(55, 102, 43, 0.6);
-    border-bottom-color: #37662B\9; /*for IE8 and below*/
+/*Нижняя часть стрелочки*/
+a.buttonMultiplyMatrix:before {
     background: #4BA91D;
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4ba91d', endColorstr='#38920c', GradientType=0);
+    width: 14px;
+    right: -7px;
+    content: '';
+    height: 21px;
+    position: absolute;
+    top: 16px;
+    -ms-transform: skewX(-30deg); /* IE 9 */
+    -webkit-transform: skewX(-30deg); /* Safari */
+    transform: skewX(-30deg);
+    border-top-right-radius: 5px; /* свойство для тех кто его поддерживает */
+    -moz-border-top-right-radius: 5px; /* для firefox */
+    -webkit-border-top-right-radius: 5px; /* для Safari и Chrome */
+    border-bottom-right-radius: 2px; /* свойство для тех кто его поддерживает */
+    -moz-border-bottom-right-radius: 2px; /* для firefox */
+    -webkit-border-bottom-right-radius: 2px; /* для Safari и Chrome */
+    border-right: 1px solid rgba(74, 128, 60, 0.6);
+    border-bottom: 1px solid rgba(55, 102, 43, 0.6);
+    background: -moz-linear-gradient(top, rgba(66, 158, 21, 1) 0%, rgba(56, 146, 12, 1) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(66, 158, 21, 1)), color-stop(100%, rgba(56, 146, 12, 1)));
+    background: -webkit-linear-gradient(top, rgba(66, 158, 21, 1) 0%, rgba(56, 146, 12, 1) 100%);
+    background: -o-linear-gradient(top, rgba(66, 158, 21, 1) 0%, rgba(56, 146, 12, 1) 100%);
+    background: -ms-linear-gradient(top, rgba(66, 158, 21, 1) 0%, rgba(56, 146, 12, 1) 100%);
+    background: linear-gradient(to bottom, rgba(66, 158, 21, 1) 0%, rgba(56, 146, 12, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#429E15', endColorstr='#38920c', GradientType=0);
 }
 
-a.buttonMultiplyMatrix:hover, a.buttonMultiplyMatrix:hover::after  {
+a.buttonMultiplyMatrix:hover {
     /*состояние при наведении*/
     /*тень*/
     /*градиент фона*/
@@ -36,31 +85,81 @@ a.buttonMultiplyMatrix:hover, a.buttonMultiplyMatrix:hover::after  {
     background: -o-linear-gradient(top, rgba(74, 166, 0, 1) 0%, rgba(66, 150, 0, 1) 100%);
     background: -ms-linear-gradient(top, rgba(74, 166, 0, 1) 0%, rgba(66, 150, 0, 1) 100%);
     background: linear-gradient(to bottom, rgba(74, 166, 0, 1) 0%, rgba(66, 150, 0, 1) 100%);
-}
-
-a.buttonMultiplyMatrix:hover {
-    /*состояние при наведении*/
     /*цет рамки*/
     border: 1px solid rgba(66, 148, 1, 0.6);
-    border: 1px solid #429401\9; /*for IE8 and below*/
+    border: 1px solid #429401 \9; /*for IE8 and below*/
     border-bottom-color: rgba(56, 126, 1, 0.6);
-    border-bottom-color: #387E01\9; /*for IE8 and below*/
-    background: #4AA600;
+    border-bottom-color: #387E01 \9; /*for IE8 and below*/
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4aa600', endColorstr='#429600', GradientType=0);
 }
 
-a.buttonMultiplyMatrix:hover::after {
-    background: #4AA600;
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4aa600', endColorstr='#429600', GradientType=0);
+a.buttonMultiplyMatrix:hover:after {
+    /*состояние при наведении*/
+    /*тень*/
+    /*градиент фона*/
+    background: -moz-linear-gradient(top, rgba(74, 166, 0, 1) 0%, rgba(70, 158, 0, 1) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(74, 166, 0, 1)), color-stop(100%, rgba(70, 158, 0, 1)));
+    background: -webkit-linear-gradient(top, rgba(74, 166, 0, 1) 0%, rgba(70, 158, 0, 1) 100%);
+    background: -o-linear-gradient(top, rgba(74, 166, 0, 1) 0%, rgba(70, 158, 0, 1) 100%);
+    background: -ms-linear-gradient(top, rgba(74, 166, 0, 1) 0%, rgba(70, 158, 0, 1) 100%);
+    background: linear-gradient(to bottom, rgba(74, 166, 0, 1) 0%, rgba(70, 158, 0, 1) 100%);
+    /*цет рамки*/
+    border-top: 1px solid rgba(66, 148, 1, 0.6);
+    border-top: 1px solid #429401 \9; /*for IE8 and below*/
+    border-right: 1px solid rgba(66, 148, 1, 0.6);
+    border-right: 1px solid #429401 \9; /*for IE8 and below*/
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4aa600', endColorstr='#469E00', GradientType=0);
+}
+
+a.buttonMultiplyMatrix:hover:before {
+    /*состояние при наведении*/
+    /*тень*/
+    /*градиент фона*/
+    background: -moz-linear-gradient(top, rgba(70, 158, 0, 1) 0%, rgba(66, 150, 0, 1) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(70, 158, 0, 1)), color-stop(100%, rgba(66, 150, 0, 1)));
+    background: -webkit-linear-gradient(top, rgba(70, 158, 0, 1) 0%, rgba(66, 150, 0, 1) 100%);
+    background: -o-linear-gradient(top, rgba(70, 158, 0, 1) 0%, rgba(66, 150, 0, 1) 100%);
+    background: -ms-linear-gradient(top, rgba(70, 158, 0, 1) 0%, rgba(66, 150, 0, 1) 100%);
+    background: linear-gradient(to bottom, rgba(70, 158, 0, 1) 0%, rgba(66, 150, 0, 1) 100%);
+    /*цет рамки*/
+    border-bottom: 1px solid rgba(56, 126, 1, 0.6);
+    border-bottom: 1px solid #387E01 \9; /*for IE8 and below*/
+    border-right: 1px solid rgba(66, 148, 1, 0.6);
+    border-right: 1px solid #429401 \9; /*for IE8 and below*/
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#469E00', endColorstr='#429600', GradientType=0);
+}
+
+a.buttonMultiplyMatrix:active {
+    background: #429500;
+    box-shadow: inset 0 2px 2px #3b8600;
+    border: 1px solid rgba(51, 113, 1, 1);
+    border-top-color: rgba(46, 101, 1, 1);
+    border-bottom-color: rgba(55, 122, 1, 0.6);
+}
+
+a.buttonMultiplyMatrix:active:after {
+    background: #429500;
+    box-shadow: inset -2px 2px 2px #3b8600;
+    border-right: 1px solid rgba(51, 113, 1, 1);
+    border-top-color: rgba(46, 101, 1, 1);
+    border-top-color: #2E6501 \9; /*for IE8 and below*/
+}
+
+a.buttonMultiplyMatrix:active:before {
+    background: #429500;
+    border-right: 1px solid rgba(51, 113, 1, 1);
+    border-right: 1px solid #337101 \9; /*for IE8 and below*/
+    border-bottom-color: rgba(55, 122, 1, 0.6);
+    border-bottom-color: #377A01 \9; /*for IE8 and below*/
 }
 
 a.greyButton {
     /*состояние покой*/
     /*цет рамки*/
     border: 1px solid rgba(217, 217, 217, 0.5);
-    border: 1px solid #D9D9D9\9; /*for IE8 and below*/
+    border: 1px solid #D9D9D9 \9; /*for IE8 and below*/
     border-bottom-color: rgba(178, 178, 178, 0.5);
-    border-bottom-color: #B2B2B2\9; /*for IE8 and below*/
+    border-bottom-color: #B2B2B2 \9; /*for IE8 and below*/
     /*градиент фона*/
     background: #FEFEFE;
     background: -moz-linear-gradient(top, rgba(254, 254, 254, 1) 0%, rgba(236, 236, 236, 1) 100%);
@@ -76,9 +175,9 @@ a.greyButton:hover {
     /*состояние при наведении*/
     /*цвет рамки*/
     border: 1px solid rgba(217, 217, 217, 0.5);
-    border: 1px solid #D9D9D9\9; /*for IE8 and below*/
+    border: 1px solid #D9D9D9 \9; /*for IE8 and below*/
     border-bottom-color: rgba(178, 178, 178, 0.5);
-    border-bottom-color: #B2B2B2\9; /*for IE8 and below*/
+    border-bottom-color: #B2B2B2 \9; /*for IE8 and below*/
     /*градиент фона*/
     background: #F2F2F2;
     background: -moz-linear-gradient(top, rgba(242, 242, 242, 1) 0%, rgba(223, 223, 223, 1) 100%);
@@ -94,12 +193,10 @@ a.greyButton:active {
     /*состояние нажатая*/
     /*цет рамки*/
     border: 1px solid rgba(204, 204, 204, 0.5);
-    border: 1px solid #CCCCCC\9; /*for IE8 and below*/
+    border: 1px solid #CCCCCC \9; /*for IE8 and below*/
     border-top-color: rgba(166, 166, 166, 0.5);
-    border-top-color: #A6A6A6\9; /*for IE8 and below*/
+    border-top-color: #A6A6A6 \9; /*for IE8 and below*/
     /*градиент фона*/
     background: #d9d9d9;
     box-shadow: inset 0 2px 2px #c1c1c1;
 }
-
-
